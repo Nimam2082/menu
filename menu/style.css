@@ -1,0 +1,42 @@
+body {
+  direction: rtl;
+  font-family: sans-serif;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* باعث میشه بک‌گراند ثابت بمونه */
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh; /* مطمئن میشه کل صفحه رو بگیره */
+}
+
+
+    h1 {
+      color: #fdb307;
+    }
+    .menu-item {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin: 15px auto;
+      padding: 10px;
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .menu-item h3 {
+      margin: 10px 0 5px;
+    }
+    .menu-item p {
+      margin: 0;
+      color: #555;
+    }
+@media screen and (max-width: 600px) {
+  .menu-item {
+    width: 90%;
+  }
+}
