@@ -1,52 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
   <title>منوی کافه گل‌قند</title>
-
-
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>☕  منوی کافه میم  ☕</h1>
+  <h1>☕ منوی کافه میم ☕</h1>
 
-  <div class="menu-item">
+  <!-- محصول ۱ -->
+  <div class="menu-item" onclick="openModal('modal1')">
     <img src="images/espreso.jpg" alt="اسپرسو">
     <h3>اسپرسو سینگل</h3>
     <p>30,000 تومان</p>
   </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>اسپرسو سینگل</h2>
+      <p>تهیه‌شده از دانه‌های عربیکای برشته، طعمی غلیظ و دل‌نشین.</p>
+      <p>کالری: ۵</p>
+    </div>
+  </div>
 
-  <div class="menu-item">
+  <!-- محصول ۲ -->
+  <div class="menu-item" onclick="openModal('modal2')">
     <img src="images/late.jpg" alt="لاته با شیر بادام">
     <h3>لاته با شیر بادام</h3>
     <p>45,000 تومان</p>
   </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>لاته با شیر بادام</h2>
+      <p>شیر بادام خانگی با قهوه اسپرسو، مناسب افراد گیاه‌خوار.</p>
+      <p>کالری: ۶۵</p>
+    </div>
+  </div>
 
-  <div class="menu-item">
+  <!-- محصول ۳ -->
+  <div class="menu-item" onclick="openModal('modal3')">
     <img src="images/Masala.jpg" alt="چای ماسالا">
     <h3>چای ماسالا</h3>
     <p>40,000 تومان</p>
   </div>
-
-  <div class="menu-item">
-    <img src="images/chocolatcake.jpg" alt="کیک شکلاتی">
-    <h3>کیک شکلاتی</h3>
-    <p>50,000 تومان</p>
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>چای ماسالا</h2>
+      <p>ترکیب چای هندی با ادویه‌های گرم؛ معطر و آرامش‌بخش.</p>
+      <p>کالری: ۹۰</p>
+    </div>
   </div>
 
-  <div class="menu-item">
-    <img src="images/esmooty_tootfarangi.jpg" alt="اسموتی توت‌فرنگی">
-    <h3>اسموتی توت‌فرنگی</h3>
-    <p>55,000 تومان</p>
-  </div>
+  <!-- همین ساختار رو می‌تونی برای بقیه محصولات هم ادامه بدی -->
 
-  <div class="menu-item">
-    <img src="images/crosan.jpg" alt="کراسان پنیر و سبزی">
-    <h3>کراسان پنیر و سبزی</h3>
-    <p>35,000 تومان</p>
-  </div>
-
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(function(modal) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
+
