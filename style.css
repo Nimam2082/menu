@@ -5,36 +5,73 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* باعث میشه بک‌گراند ثابت بمونه */
+  background-attachment: fixed;
   padding: 20px;
   text-align: center;
-  min-height: 100vh; /* مطمئن میشه کل صفحه رو بگیره */
+  min-height: 100vh;
 }
 
+h1 {
+  color: #6b4c3b;
+}
 
-    h1 {
-      color: #fdb307;
-    }
-    .menu-item {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      margin: 15px auto;
-      padding: 10px;
-      width: 300px;
-      background-color: #fff;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
-    .menu-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .menu-item h3 {
-      margin: 10px 0 5px;
-    }
-    .menu-item p {
-      margin: 0;
-      color: #555;
-    }
+.menu-item {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin: 15px auto;
+  padding: 10px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+.menu-item h3 {
+  margin: 10px 0 5px;
+}
+.menu-item p {
+  margin: 0;
+  color: #555;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  text-align: right;
+}
+.close {
+  color: #aaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive */
 @media screen and (max-width: 600px) {
   .menu-item {
     width: 90%;
